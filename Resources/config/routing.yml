@@ -1,0 +1,4 @@
+application_config_edit:
+    path:     /admin/setting/modify
+    defaults: { _controller: ApplicationConfigBundle:SettingEditAdmin:list }
+
