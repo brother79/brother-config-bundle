@@ -31,4 +31,12 @@ brother_config:
 # Usage
 
 ## Defining settings
-```
+
+
+```yaml
+# in sonata admin confog
+    dashboard:
+        groups:
+            group:
+                - brother_config.admin.setting
+                - brother_config.setting
