@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\ConfigBundle\Admin;
+namespace Brother\ConfigBundle\Admin;
 
 use Brother\CommonBundle\AppDebug;
 use Sonata\AdminBundle\Admin\Admin;

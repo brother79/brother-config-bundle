@@ -1,0 +1,13 @@
+parameters:
+
+services:
+    brother_config.admin.setting:
+        class: Brother\ConfigBundle\Admin\SettingAdmin
+        arguments: [~, Craue\ConfigBundle\Entity\Setting, BrotherConfigBundle:SettingAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Setting Admin}
+    brother_config.setting:
+        class: Brother\ConfigBundle\Admin\SettingEditAdmin
+        arguments: [~, ~, BrotherConfigBundle:SettingEditAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Setting Edit}

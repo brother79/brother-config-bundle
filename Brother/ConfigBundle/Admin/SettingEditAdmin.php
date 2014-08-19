@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\ConfigBundle\Admin;
+namespace Brother\ConfigBundle\Admin;
 
 use Brother\CommonBundle\AppDebug;
 use Knp\Menu\FactoryInterface as MenuFactoryInterface;
@@ -44,7 +44,7 @@ class SettingEditAdmin extends Admin
 
     public function getBaseRouteName()
     {
-        return 'application_config_edit';
+        return 'brother_config_edit';
     }
 
 

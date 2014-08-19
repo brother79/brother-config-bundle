@@ -1,0 +1,12 @@
+1. appkernel.php
+
+    public function registerBundles()
+    {
+        $bundles = array(
+            ...
+            new Craue\ConfigBundle\CraueConfigBundle(),
+            new Brother\ConfigBundle\BrotherConfigBundle('CraueConfigBundle'),
+        );
+
+    }
+

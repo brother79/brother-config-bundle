@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\ConfigBundle\Tests\Controller;
+namespace Brother\ConfigBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

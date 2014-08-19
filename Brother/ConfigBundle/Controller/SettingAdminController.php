@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\ConfigBundle\Controller;
+namespace Brother\ConfigBundle\Controller;
 
 use Sonata\AdminBundle\Controller\CRUDController;
 
