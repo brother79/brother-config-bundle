@@ -4,7 +4,6 @@ namespace Brother\ConfigBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use Craue\ConfigBundle\Entity\Setting as BaseSetting;
 
 /**
  * @author Christian Raue <christian.raue@gmail.com>
@@ -12,8 +11,9 @@ use Craue\ConfigBundle\Entity\Setting as BaseSetting;
  * @license http://opensource.org/licenses/mit-license.php MIT License
  *
  * @ORM\Entity
+ * @ORM\Table(name="brother_config_setting")
  */
-class Setting extends BaseSetting {
+class Setting {
 
 	/**
 	 * @var string

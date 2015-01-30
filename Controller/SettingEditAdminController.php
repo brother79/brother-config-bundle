@@ -2,7 +2,7 @@
 
 namespace Brother\ConfigBundle\Controller;
 
-use Craue\ConfigBundle\Controller\SettingsController;
+use Brother\ConfigBundle\Controller\SettingsController;
 use Symfony\Component\HttpFoundation\Response;
 
 class SettingEditAdminController extends SettingsController

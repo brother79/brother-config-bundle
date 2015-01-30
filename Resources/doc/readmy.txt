@@ -4,8 +4,8 @@
     {
         $bundles = array(
             ...
-            new Craue\ConfigBundle\CraueConfigBundle(),
-            new Brother\ConfigBundle\BrotherConfigBundle('CraueConfigBundle'),
+            new Brother\ConfigBundle\BrotherConfigBundle(),
+            new Brother\ConfigBundle\BrotherConfigBundle('BrotherConfigBundle'),
         );
 
     }

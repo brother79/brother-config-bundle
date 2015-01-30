@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	Author: Christian Raue <christian.raue@gmail.com>
+	Copyright: 2011-2014 Christian Raue
+	License: http://opensource.org/licenses/mit-license.php MIT License
+-->
+<container
+		xmlns="http://symfony.com/schema/dic/services"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+	<parameters>
+		<parameter key="brother_config.configTemplate.class">Brother\ConfigBundle\Twig\Extension\ConfigTemplateExtension</parameter>
+		<parameter key="brother_config.configTemplate.sectionOrder" type="collection" />
+	</parameters>
+
+	<services>
+		<service id="twig.extension.brother_config_template" class="%brother_config.configTemplate.class%">
+			<tag name="twig.extension" />
+			<call method="setSectionOrder">
+				<argument>%brother_config.configTemplate.sectionOrder%</argument>
+			</call>
+			<call method="setConfig">
+				<argument type="service" id="brother_config" />
+			</call>
+		</service>
+	</services>
+</container>

@@ -1,0 +1,8 @@
+brother_config_settings:
+  resource: "@BrotherConfigBundle/Resources/config/routing/settings.xml"
+  prefix: /settings
+
+admin_settings_start:
+  pattern: /settings-start/modify
+  defaults:
+    _controller: BrotherConfigBundle:Settings:modify

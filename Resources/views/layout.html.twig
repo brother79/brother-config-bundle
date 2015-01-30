@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		{% block stylesheets %}
+			{% stylesheets '@BrotherConfigBundle/Resources/assets/css/form.css' %}
+				<link type="text/css" rel="stylesheet" href="{{ asset_url }}" />
+			{% endstylesheets %}
+		{% endblock %}
+	</head>
+	<body>
+		{% for type, flashMessages in app.session.flashbag.all() %}
+			{% for flashMessage in flashMessages %}
+				<div class="{{ type }}">
+					{{- flashMessage -}}
+				</div>
+			{% endfor %}
+		{% endfor %}
+
+		{% block brother_config_content %}
+		{% endblock %}
+	</body>
+</html>
