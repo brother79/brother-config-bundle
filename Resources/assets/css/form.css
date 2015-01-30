@@ -1,6 +1,6 @@
 .brother_config_settings_modify label:after {
 	content: ': ';
 }
-brother_e_config_settings_modify input[type=text] {
+.brother_config_settings_modify input[type=text] {
 	width: 300px;
 }
