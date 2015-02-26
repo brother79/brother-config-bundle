@@ -47,7 +47,7 @@ class SettingAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('value')
+            ->add('value', 'textarea')
             ->add('section');
     }
 
