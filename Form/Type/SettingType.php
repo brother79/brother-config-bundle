@@ -20,8 +20,12 @@ class SettingType extends AbstractType {
 	public function buildForm(FormBuilderInterface $builder, array $options) {
 		$builder->add('name', 'hidden');
 		$builder->add('section', 'hidden');
-		$builder->add('value', null, array(
+		$builder->add('value', 'textarea', array(
 			'required' => false,
+            'attr' => array(
+                'class' => 'span10',
+                'rows' => 6
+            ),
 		));
 	}
 

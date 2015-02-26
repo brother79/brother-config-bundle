@@ -4,3 +4,11 @@
 .brother_config_settings_modify input[type=text] {
 	width: 300px;
 }
+
+.brother_config_settings_modify .form-group {
+    clear: both;
+}
+
+.brother_config_settings_modify .form-group textarea {
+    margin-bottom: 15px;
+}
