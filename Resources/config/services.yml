@@ -11,3 +11,6 @@ services:
         arguments: [ ~, ~, BrotherConfigBundle:SettingEditAdmin ]
         tags:
             - { name: sonata.admin, manager_type: orm, group: admin, label: Setting Edit }
+    brother_config.cache:
+        class: Doctrine\Common\Cache\PhpFileCache
+        arguments: [%kernel.cache_dir%/brother_settings]

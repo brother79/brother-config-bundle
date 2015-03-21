@@ -2,7 +2,10 @@
 
 namespace Brother\ConfigBundle\Util;
 
+use Brother\CommonBundle\AppDebug;
+use Brother\CommonBundle\AppTools;
 use Brother\ConfigBundle\Entity\Setting;
+use Doctrine\Common\Cache\PhpFileCache;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
 
@@ -34,15 +37,21 @@ class Config {
 	 * @throws \RuntimeException If the setting is not defined.
 	 */
 	public function get($name) {
-		$setting = $this->getRepo()->findOneBy(array(
-			'name' => $name,
-		));
 
-		if ($setting === null) {
-			throw $this->createNotFoundException($name);
-		}
-
-		return $setting->getValue();
+        $cache = AppTools::$container->get('brother_config.cache');
+        /* @var $cache PhpFileCache */
+        $cache->setNamespace('brother_config.cache');
+        if (false === ($value = $cache->fetch($name))) {
+            $setting = $this->getRepo()->findOneBy(array(
+                'name' => $name,
+            ));
+            if ($setting === null) {
+                throw $this->createNotFoundException($name);
+            }
+            $value = $setting->getValue();
+            $cache->save($name, $value, 3600);//TTL 1h
+        }
+		return $value;
 	}
 
 	/**
