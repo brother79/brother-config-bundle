@@ -2,7 +2,7 @@
 
 namespace Brother\ConfigBundle\Controller;
 
-use Brother\CommonBundle\MongoDB\BaseRepository;
+use Brother\CommonBundle\Model\MongoDB\BaseRepository;
 use Brother\ConfigBundle\Entity\Setting;
 use Brother\ConfigBundle\Form\ModifySettingsForm;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
